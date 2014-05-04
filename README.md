@@ -1,7 +1,7 @@
 
 # metalsmith-include
 
-  Include other source files as variables to use as sort-of partials. Works best with `metalsmith-templates`.
+  Make the contents of other source files as properties on a metalsmith file object. Can be used as a rudimentary partial system for `metalsmith-templates`.
 
 ## Example
 

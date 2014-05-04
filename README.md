@@ -23,7 +23,8 @@ home.jade:
 .main
   !=contents
 
-!=thanks
+  .thanks
+    !=thanks
 ```
 
 thanks.md:
@@ -35,13 +36,6 @@ partial: true
 ---
 
 #### Thanks for visiting!
-```
-
-thanks.jade
-
-```jade
-.thanks
-  !=contents
 ```
 
 Output:

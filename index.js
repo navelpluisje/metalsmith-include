@@ -1,6 +1,7 @@
 
 var debug = require('debug')('metalsmith-include');
 var each = require('async').each;
+var marked = require('marked');
 
 /**
  * Expose `plugin`.
@@ -63,7 +64,7 @@ function plugin(opts) {
 
         debug('adding %s to includes as `%s`', resolvedFilename, name);
 
-        file[name] = included[filename].contents;
+        file[name] = marked(String(included[filename].contents));
 
         done();
       }

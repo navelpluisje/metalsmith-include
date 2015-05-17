@@ -64,7 +64,8 @@ function plugin(opts) {
 
         debug('adding %s to includes as `%s`', resolvedFilename, name);
 
-        file[name] = marked(String(included[filename].contents));
+        file[name] = included[filename];
+        file[name].contents = marked( String(included[filename].contents));
 
         done();
       }

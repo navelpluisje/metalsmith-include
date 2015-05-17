@@ -66,7 +66,7 @@ function plugin(opts) {
 
         file[name] = included[filename];
         file[name].contents = marked( String(included[filename].contents));
-
+        file[name].sourcefile = filename; 
         done();
       }
     }

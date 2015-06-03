@@ -18,6 +18,16 @@ describe('metalsmith-include', function(){
       });
   });
 
+  it('should include the frontmatter of included source files', function(done){
+    Metalsmith('test/fixture-basic')
+      .use(include())
+      .build(function(err, files){
+        if (err) return done(err);
+        assert.equal(files['index.md'].thanks.testkey, files['thanks.md'].testkey);
+        done();
+      });
+  });
+
   it('should include files without an extension', function(done){
     Metalsmith('test/fixture-ext')
       .use(include())

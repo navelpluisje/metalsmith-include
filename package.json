@@ -8,9 +8,7 @@
   },
   "dependencies": {
     "async": "^0.7.0",
-    "clone": "^1.0.2",
-    "debug": "^0.8.1",
-    "merge": "^1.2.0"
+    "debug": "^0.8.1"
   },
   "devDependencies": {
     "mocha": "1.x",

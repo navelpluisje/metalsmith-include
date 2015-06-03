@@ -13,7 +13,7 @@ describe('metalsmith-include', function(){
       .build(function(err, files){
         if (err) return done(err);
         equal('test/fixture-basic/expected', 'test/fixture-basic/build');
-        assert.equal(files['index.md'].thanks, files['thanks.md'].contents);
+        assert.equal(files['index.md'].thanks.contents, files['thanks.md'].contents);
         done();
       });
   });

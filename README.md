@@ -6,7 +6,8 @@
 ## Example
 
 index.md:
-(Note the lack of extension on `thanks` - this provides maximum flexibility, since you may have a markdown parser that converts `thanks.md` to `thanks.html`)
+
+<sub><sup>Note the lack of extension on `thanks` - this provides maximum flexibility, since you may have a markdown parser that converts `thanks.md` to `thanks.html`, and this plugin will search for any extension if none is provided</sup></sub>
 
 ```markdown
 ---

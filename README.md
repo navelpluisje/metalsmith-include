@@ -6,12 +6,12 @@
 ## Example
 
 index.md:
-
+(note the lack of extension in the included filename)
 ```markdown
 ---
 template: home.jade
 include:
-  thanks: thanks.md
+  thanks: thanks
 ---
 
 ### Welcome to my website!
@@ -55,7 +55,7 @@ Output:
     $ npm install metalsmith-include
 
 ## Options
-  
+
   The only option is `deletePartials`, which tells `metalsmith-include` whether or not to remove files that are included in other files, and have a `partial` indicator in their front-matter. Defaults to true.
 
 ## CLI Usage

@@ -7,8 +7,9 @@
     "test": "make test"
   },
   "dependencies": {
+    "async": "^0.7.0",
     "debug": "^0.8.1",
-    "async": "^0.7.0"
+    "marked": "^0.3.3"
   },
   "devDependencies": {
     "mocha": "1.x",

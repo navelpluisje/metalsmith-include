@@ -6,12 +6,13 @@
 ## Example
 
 index.md:
+(Note the lack of extension on `thanks` - this provides maximum flexibility, since you may have a markdown parser that converts `thanks.md` to `thanks.html`)
 
 ```markdown
 ---
 template: home.jade
 include:
-  thanks: thanks.md
+  thanks: thanks
 ---
 
 ### Welcome to my website!
@@ -23,8 +24,7 @@ home.jade:
 .main
   !=contents
 
-  .thanks
-    !=thanks
+  !=thanks
 ```
 
 thanks.md:
@@ -36,6 +36,13 @@ partial: true
 ---
 
 #### Thanks for visiting!
+```
+
+thanks.jade:
+
+```jade
+.thanks
+  !=contents
 ```
 
 Output:

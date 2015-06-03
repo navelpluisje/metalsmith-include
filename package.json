@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-include",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Make the contents of other source files as properties.",
   "main": "index.js",
   "scripts": {

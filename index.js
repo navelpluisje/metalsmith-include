@@ -1,7 +1,6 @@
 
 var debug = require('debug')('metalsmith-include');
 var each = require('async').each;
-var marked = require('marked');
 
 /**
  * Expose `plugin`.

@@ -3,7 +3,6 @@ var assert = require('assert');
 var equal = require('assert-dir-equal');
 var Metalsmith = require('metalsmith');
 var templates = require('metalsmith-templates');
-var markdown = require('metalsmith-markdown');
 var include = require('..');
 
 describe('metalsmith-include', function(){

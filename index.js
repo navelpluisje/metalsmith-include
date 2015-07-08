@@ -64,8 +64,7 @@ function plugin(opts) {
 
         debug('adding %s to includes as `%s`', resolvedFilename, name);
 
-        var fileClone = included[filename];
-        file[name] = fileClone;
+        file[name] = clone(included[filename]);
         file[name].contents = included[filename].contents;
         done();
 

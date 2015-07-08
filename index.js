@@ -67,7 +67,6 @@ function plugin(opts) {
         var fileClone = included[filename];
         file[name] = fileClone;
         file[name].contents = included[filename].contents;
-        file[name].sourcefile = filename;
         done();
 
       }

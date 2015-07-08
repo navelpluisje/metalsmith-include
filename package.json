@@ -7,16 +7,16 @@
     "test": "make test"
   },
   "dependencies": {
-    "debug": "^0.8.1",
-    "async": "^0.7.0"
+    "async": "^0.7.0",
+    "clone": "^1.0.2",
+    "debug": "^0.8.1"
   },
   "devDependencies": {
     "mocha": "1.x",
     "metalsmith": "0.x",
     "assert-dir-equal": "0.x",
     "metalsmith-templates": "^0.5.0",
-    "jade": "^1.3.1",
-    "metalsmith-markdown": "^0.2.1"
+    "jade": "^1.3.1"
   },
   "repository": {
     "type": "git",

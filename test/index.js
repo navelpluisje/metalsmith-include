@@ -3,7 +3,6 @@ var assert = require('assert');
 var equal = require('assert-dir-equal');
 var Metalsmith = require('metalsmith');
 var templates = require('metalsmith-templates');
-var markdown = require('metalsmith-markdown');
 var include = require('..');
 
 describe('metalsmith-include', function(){
@@ -13,7 +12,17 @@ describe('metalsmith-include', function(){
       .build(function(err, files){
         if (err) return done(err);
         equal('test/fixture-basic/expected', 'test/fixture-basic/build');
-        assert.equal(files['index.md'].thanks, files['thanks.md'].contents);
+        assert.equal(files['index.md'].thanks.contents, files['thanks.md'].contents);
+        done();
+      });
+  });
+
+  it('should include the frontmatter of included source files', function(done){
+    Metalsmith('test/fixture-basic')
+      .use(include())
+      .build(function(err, files){
+        if (err) return done(err);
+        assert.equal(files['index.md'].thanks.testkey, files['thanks.md'].testkey);
         done();
       });
   });

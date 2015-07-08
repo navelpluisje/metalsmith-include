@@ -1,5 +1,6 @@
 
 var debug = require('debug')('metalsmith-include');
+var clone = require('clone');
 var each = require('async').each;
 
 /**
@@ -63,10 +64,12 @@ function plugin(opts) {
 
         debug('adding %s to includes as `%s`', resolvedFilename, name);
 
-        file[name] = included[filename];
+        var fileClone = included[filename];
+        file[name] = fileClone;
         file[name].contents = included[filename].contents;
         file[name].sourcefile = filename;
         done();
+
       }
     }
 
